@@ -46,14 +46,15 @@
       "Era 3: Chemoterapija be chemoterapijos",
       "Era 4: Pirštaciulpys",
       "Era 5: Bičių brutalumo auka",
-      "Era 6: Ačiū kad neprarijai",
-      "Era 7: Tyle Durden"
+      "Era 6: Ačiū, kad neprarijai",
+      "Era 7: Tyler Durden"
     ];
 
     const buttons = document.querySelectorAll(".timeline-item");
     const imageElement = document.getElementById("timeline-image");
     const captionElement = document.getElementById("caption");
-
+    imageElement.src = images[0];
+    captionElement.textContent = captions[0];
     buttons.forEach(button => {
       button.addEventListener("click", () => {
         const index = button.getAttribute("data-index");
