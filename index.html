@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Evolution of Paulina – the Infamous Cow</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="main-header">
+    <h1>Evolution of Paulina – the Infamous Cow</h1>
+  </header>
+
+  <div class="timeline-container">
+    <div class="timeline">
+      <button class="timeline-item" data-index="0">Era 1</button>
+      <button class="timeline-item" data-index="1">Era 2</button>
+      <button class="timeline-item" data-index="2">Era 3</button>
+      <button class="timeline-item" data-index="3">Era 4</button>
+      <button class="timeline-item" data-index="4">Era 5</button>
+      <button class="timeline-item" data-index="5">Era 6</button>
+      <button class="timeline-item" data-index="6">Era 7</button>
+    </div>
+  </div>
+
+  <div class="image-container">
+    <img id="timeline-image" src="" alt="Evolution Image" />
+    <h2 id="caption" class="caption-text"></h2>
+  </div>
+
+  <script>
+    const images = [
+      "images/era1.jpg",
+      "images/era2.jpg",
+      "images/era3.jpg",
+      "images/era4.jpg",
+      "images/era5.jpg",
+      "images/era6.jpg",
+      "images/era7.jpg"
+    ];
+
+    const captions = [
+      "Era 1: Goofy",
+      "Era 2: nzn kas čia per",
+      "Era 3: Chemoterapija be chemoterapijos",
+      "Era 4: Pirštaciulpys",
+      "Era 5: Bičių brutalumo auka",
+      "Era 6: Ačiū kad neprarijai",
+      "Era 7: Tyle Durden"
+    ];
+
+    const buttons = document.querySelectorAll(".timeline-item");
+    const imageElement = document.getElementById("timeline-image");
+    const captionElement = document.getElementById("caption");
+
+    buttons.forEach(button => {
+      button.addEventListener("click", () => {
+        const index = button.getAttribute("data-index");
+        imageElement.src = images[index];
+        imageElement.alt = `Image for Era ${parseInt(index) + 1}`;
+        captionElement.textContent = captions[index];
+      });
+    });
+  </script>
+
+</body>
+</html>
+

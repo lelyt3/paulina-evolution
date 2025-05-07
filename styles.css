@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Caesar+Dressing&family=EB+Garamond&display=swap');
+
+body {
+  font-family: 'EB Garamond', serif;
+  margin: 0;
+  padding: 0;
+  background: url('https://www.transparenttextures.com/patterns/old-wall.png');
+  background-color: #d7c5a0;
+  color: #2c2c2c;
+  background-repeat: repeat;
+}
+
+/* Header */
+.main-header {
+  text-align: center;
+  padding: 40px 20px 20px;
+  font-family: 'Caesar Dressing', cursive;
+  color: #3e2f1c;
+  font-size: 2.5em;
+  text-shadow: 2px 2px #f0e2b6;
+  background: rgba(255, 248, 230, 0.85);
+  border-bottom: 4px solid #9f8c67;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Timeline Bar */
+.timeline-container {
+  background: rgba(255, 248, 230, 0.95);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  padding: 10px 0;
+  border-bottom: 4px solid #a89f7c;
+  position: sticky;
+  top: 130px;
+  z-index: 999;
+}
+
+/* Buttons */
+.timeline {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 10px;
+}
+
+.timeline-item {
+  font-family: 'Caesar Dressing', cursive;
+  background: #6b4f31;
+  color: #fff6e5;
+  border: 2px solid #bfa87b;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.timeline-item:hover {
+  background: #8a674a;
+  transform: scale(1.05);
+}
+
+/* Image Display Area */
+.image-container {
+  margin-top: 30px;
+  text-align: center;
+  padding: 2em;
+}
+
+.image-container img {
+  max-width: 85%;
+  max-height: 70vh;
+  border-radius: 12px;
+  border: 5px solid #a89f7c;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  background: #fefbf4;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Caption Text */
+.caption-text {
+  margin-top: 1rem;
+  font-size: 1.3em;
+  font-style: italic;
+  color: #3e2f1c;
+  background-color: rgba(255, 248, 230, 0.85);
+  padding: 0.6em 1em;
+  border: 2px solid #bca980;
+  border-radius: 8px;
+  display: inline-block;
+  max-width: 90%;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.2);
+}
